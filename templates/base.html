@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block header %}
+        <title>{{ page_title }}</title>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+        <form>
+            <input name="Eat me">
+            <label class="switch">
+              <input type="checkbox" class="switch-input">
+                <span class="switch-label" data-on="On" data-off="Off"></span>
+              <span class="switch-handle"></span>
+            </label>
+        </form>
+    {% endblock %}
+</body>
+</html>
