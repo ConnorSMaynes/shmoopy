@@ -25,14 +25,14 @@ class BaseHandler(webapp2.RequestHandler):
         # if an HTTP exception, show its code; otherwise, show 500
         if isinstance(exception, webapp2.HTTPException):
             if int(exception.code) == 403:
-                message = 'Sorry, your request cannot be completed right now.'
+                message = 'Sorry, your request cannot be completed right now. - shmoopy'
             elif int(exception.code) == 404:
-                message = 'Oops. There should be a page here. My bad.'
+                message = 'Oops. There should be a page here. My bad. - shmoopy'
             else:
-                message = 'A server error occurred'
+                message = 'A server error occurred. - shmoopy'
         else:
             page_title = 'Error - 500'
-            message = 'A server error occurred'
+            message = 'A server error occurred. - shmoopy'
         context = {
             'page_title': page_title,
             'page_description': page_description,
@@ -70,7 +70,7 @@ class BaseHandler(webapp2.RequestHandler):
             })
 
         def format_datetime(self, value, format='%H:%M / %d-%m-%Y'):
-            '''returns formatted value'''
+            '''returns formatted value in a more user-friendly manner.'''
             return value.strftime(format)
 
         j.environment.filters['datetime'] = format_datetime

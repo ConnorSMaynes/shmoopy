@@ -1,9 +1,25 @@
 {% extends 'base.html' %}
-{% block title %}
-    {% if page_title is defined %}
-        {{page_title}}
-    {% else %}
-        shmoopy - The Social Network Bot System
+
+{% block head %}
+    {% if page_description is defined %}
+        <title>{{ page_title }}</title>
+    {% else % }
+        <title>shmoopy</title>
+    {% endif %}
+    {% if page_description is defined %}
+        <meta name="description" content="{{ page_description }}">
+    {% else % }
+        <meta name="description" content="The Social Networking Bot System">
     {% endif %}
 {% endblock %}
 
+{% block body %}
+    <article>
+        <div class=""
+    </article>
+{% endblock %}
+
+{% block footer %}
+    <p>created by c. s. maynes</p>
+    <p><b>2017</b></p>
+{% endblock %}
