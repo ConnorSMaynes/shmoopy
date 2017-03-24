@@ -12,6 +12,7 @@ class TwitterHandler(basehandler.BaseHandler):
                   }
         self.render_response('public/splash.html', **context)
 
+<<<<<<< HEAD
 
 class TwitterOauthHandler(basehandler.BaseHandler):
     def get(self):
@@ -53,6 +54,18 @@ class HomeHandler(basehandler.BaseHandler):
         self.render_response('public/splash.html', **context)
 
 
+=======
+class HomeHandler(basehandler.BaseHandler):
+    def get(self):
+        page_title = 'schmoopy - The Social Network Bot System'
+        page_description = page_title
+        context = {
+                    'page_title': page_title,
+                    'page_description': page_description,
+                  }
+        self.render_response('public/splash.html', **context)
+        
+>>>>>>> origin/master
 class ContactSubmitHandler(basehandler.BaseHandler):
     def post(self):
         if self.form.validate():    # check if form passes validators
